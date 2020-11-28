@@ -4,6 +4,7 @@ const client = new Discord.Client();
 const prefix = "!";
 
 const fs = require("fs");
+const discordkey = require("./discordkey.json");
 
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync("./commands").filter(file => file.endsWith(".js"));
@@ -37,12 +38,4 @@ client.on("message", message => {
   }
 });
 
-
-
-
-
-
-
-
-
-client.login('NzgxOTY4NDkwNTI1MDk3OTk0.X8FW6A.d1Cef4OGyBxxsgEs5qzQcjCYC0c');
+client.login(discordkey);
