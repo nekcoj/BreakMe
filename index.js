@@ -33,7 +33,9 @@ client.on("message", message => {
     client.commands.forEach(command => {
       message.channel.send(`Name: ${command.name}\nDescription: ${command.description}\n`)
     });
-  } else {
+  } /* else if (command === "ip") {
+    client.commands.get("ip").execute(message, args);
+  } */ else {
     message.channel.send("Not a valid command!");
   }
 });
